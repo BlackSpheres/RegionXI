@@ -1,0 +1,68 @@
+	h1{
+			color: #1d1d1d;
+			font-size: 50px;
+			line-height: 48px;
+			
+			
+			font-family: "IkarosLight";
+			text-align: center;
+			top: 0;
+			z-index: 10;
+			padding-top: 0;
+		}
+
+		p {
+			color: #1d1d1d;
+			font-size: 100px;
+			line-height: 48px;
+			font-family: "Innercity";
+			text-align: center;
+
+			z-index: 10;
+			
+		}
+
+		
+
+		body, html {
+  			height: 100%;
+  			margin: 0;
+  		}
+  		.bgimg-1 {
+  			background-image: url(images/davao-baywalk.jpg);
+  			height: 100%;
+  			width: 100%;
+  			background-repeat: no-repeat;
+  			background-size: 100%;
+			}
+
+		.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: "Innercity";
+  font-size: 20px;
+  color: #111;
+}
+
+
+
+		#slide-1 {
+			background-image: url('../images/img_5926.jpg');
+		}
