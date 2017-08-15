@@ -18,7 +18,3 @@ Route::get('wait', function () {return view('wait');});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
