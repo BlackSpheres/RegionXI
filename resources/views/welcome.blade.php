@@ -1,95 +1,204 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGION XI- Home</title>
+	<link rel="stylesheet" href="../css/design.css">
+	<script src="../js/vendor/modernizr-2.7.1.min.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+	@font-face {
+		font-family: "BrownhillScript";
+		src: url("../fonts/BillyOhio.ttf");
+	}
 
-        <title>Laravel</title>
+	@font-face {
+		font-family: "Innercity";
+		src: url('../fonts/InnercityRegular.ttf');
+	}
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+	/* background setup */
+.background {
+    background-repeat:no-repeat;
+    /* custom background-position */
+    background-position:50% 50%;
+    /* ie8- graceful degradation */
+    background-position:50% 50%\9 !important;
+}
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+/* fullscreen setup */
+html, body {
+    /* give this to all tags from html to .fullscreen */
+    height:100%;
+}
+.fullscreen,
+.content-a {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.fullscreen.overflow,
+.fullscreen.overflow .content-a {
+    height:auto;
+    min-height:100%;
+}
 
-            .full-height {
-                height: 100vh;
-            }
+/* content centering styles */
+.content-a {
+    display:table;
+}
+.content-b {
+	display:table-cell;
+    position:relative;
+	vertical-align:middle;
+	text-align:center;
+	font-family: "BrownhillScript";
+	font-size: 178px;
+}
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+/* visual styles */
+body{
+    margin:0;
+    font-family:sans-serif;
+    font-size:28px;
+    line-height:100px;
+	color:#ffffff;
+    text-align:center;
+}
+section {
+	background:#9ed100;
+}
+.not-fullscreen {
+    height:50%;
+}
+	
+	</style>
+</head>
+<body>
 
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+<div class="fullscreen background parallax" style="background-image:url('../images/PEARLFARM.jpg');
+" data-img-width="1600" data-img-height="1064" data-diff="100">
+    <div class="content-a">
+        <div class="content-b">
+           Welcome to Davao
         </div>
-    </body>
+    </div>
+</div>
+  
+<div class="not-fullscreen background parallax" style="background-image:url('http://www.minimit.com/images/picjumbo.com_IMG_6643.jpg');" data-img-width="1600" data-img-height="1064" data-diff="100">
+    <div class="content-a">
+        <div class="content-b">
+            Centered content
+        </div>
+    </div>
+</div>
+
+
+<!-- J A V A S C R I P T -->
+<script type="text/javascript" src="../js/skrollr.min.js"></script>
+	<script type="text/javascript">
+	skrollr.init({
+		smoothScrolling: false,
+		mobileDeceleration: 0.004
+	});
+	</script>
+<script type="text/javascript">
+	if("ontouchstart" in window){
+    document.documentElement.className = document.documentElement.className + " touch";
+}
+if(!$("html").hasClass("touch")){
+    /* background fix */
+    $(".parallax").css("background-attachment", "fixed");
+}
+
+/* fix vertical when not overflow
+call fullscreenFix() if .fullscreen content changes */
+function fullscreenFix(){
+    var h = $('body').height();
+    // set .fullscreen height
+    $(".content-b").each(function(i){
+        if($(this).innerHeight() > h){ $(this).closest(".fullscreen").addClass("overflow");
+        }
+    });
+}
+$(window).resize(fullscreenFix);
+fullscreenFix();
+
+/* resize background images */
+function backgroundResize(){
+    var windowH = $(window).height();
+    $(".background").each(function(i){
+        var path = $(this);
+        // variables
+        var contW = path.width();
+        var contH = path.height();
+        var imgW = path.attr("data-img-width");
+        var imgH = path.attr("data-img-height");
+        var ratio = imgW / imgH;
+        // overflowing difference
+        var diff = parseFloat(path.attr("data-diff"));
+        diff = diff ? diff : 0;
+        // remaining height to have fullscreen image only on parallax
+        var remainingH = 0;
+        if(path.hasClass("parallax") && !$("html").hasClass("touch")){
+            var maxH = contH > windowH ? contH : windowH;
+            remainingH = windowH - contH;
+        }
+        // set img values depending on cont
+        imgH = contH + remainingH + diff;
+        imgW = imgH * ratio;
+        // fix when too large
+        if(contW > imgW){
+            imgW = contW;
+            imgH = imgW / ratio;
+        }
+        //
+        path.data("resized-imgW", imgW);
+        path.data("resized-imgH", imgH);
+        path.css("background-size", imgW + "px " + imgH + "px");
+    });
+}
+$(window).resize(backgroundResize);
+$(window).focus(backgroundResize);
+backgroundResize();
+
+/* set parallax background-position */
+function parallaxPosition(e){
+    var heightWindow = $(window).height();
+    var topWindow = $(window).scrollTop();
+    var bottomWindow = topWindow + heightWindow;
+    var currentWindow = (topWindow + bottomWindow) / 2;
+    $(".parallax").each(function(i){
+        var path = $(this);
+        var height = path.height();
+        var top = path.offset().top;
+        var bottom = top + height;
+        // only when in range
+        if(bottomWindow > top && topWindow < bottom){
+            var imgW = path.data("resized-imgW");
+            var imgH = path.data("resized-imgH");
+            // min when image touch top of window
+            var min = 0;
+            // max when image touch bottom of window
+            var max = - imgH + heightWindow;
+            // overflow changes parallax
+            var overflowH = height < heightWindow ? imgH - height : imgH - heightWindow; // fix height on overflow
+            top = top - overflowH;
+            bottom = bottom + overflowH;
+            // value with linear interpolation
+            var value = min + (max - min) * (currentWindow - top) / (bottom - top);
+            // set background-position
+            var orizontalPosition = path.attr("data-oriz-pos");
+            orizontalPosition = orizontalPosition ? orizontalPosition : "50%";
+            $(this).css("background-position", orizontalPosition + " " + value + "px");
+        }
+    });
+}
+if(!$("html").hasClass("touch")){
+    $(window).resize(parallaxPosition);
+    //$(window).focus(parallaxPosition);
+    $(window).scroll(parallaxPosition);
+    parallaxPosition();
+}
+</script>
+</body>
 </html>
