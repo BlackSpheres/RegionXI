@@ -16,10 +16,11 @@
           <ul class="filter font-alt" id="filter">
             <li><a class="current wow fadeInUp" href="#" data-filter="*">All</a></li>
             <li><a class="wow fadeInUp" href="#" data-filter=".valley" data-wow-delay="0.2s">Compostella Valley</li>
-            <li><a class="wow fadeInUp" href="#" data-filter=".city" data-wow-delay="0.2s">Davao City</li>
+            
             <li><a class="wow fadeInUp" href="#" data-filter=".norte" data-wow-delay="0.4s">Davao del Norte</a></li>
             <li><a class="wow fadeInUp" href="#" data-filter=".sur" data-wow-delay="0.6s">Davao del Sur</a></li>
             <li><a class="wow fadeInUp" href="#" data-filter=".oriental" data-wow-delay="0.6s">Davao Oriental</a></li>
+            <li><a class="wow fadeInUp" href="#" data-filter=".city" data-wow-delay="0.2s">Davao Occidental</li>
           </ul>
         </div>
       </div>
@@ -52,7 +53,7 @@
                   <div class="work-image"><img src="../images/PEARLFARM.jpg" alt="Portfolio Item"/></div>
                   <div class="work-caption font-alt">
                     <h3 class="work-title">Pearl Farm Resort</h3>
-                    <div class="work-descr">Davao City</div>
+                    <div class="work-descr">Davao del Norte</div>
                   </div></a></li>
                   <li class="work-item oriental"><a href="portfolio_single_featured_video2.html">
                     <div class="work-image"><img src="../images/davao-oriental.jpg" alt="Portfolio Item"/></div>
@@ -61,34 +62,34 @@
                       <div class="work-descr">Davao Oriental</div>
                     </div></a></li>
                     <li class="work-item marketing webdesign"><a href="portfolio_single_featured_image1.html">
-                      <div class="work-image"><img src="assets/images/portfolio/masonry-portfolio7.jpg" alt="Portfolio Item"/></div>
+                      <div class="work-image"><img src="../images/rizal.jpg" alt="Portfolio Item"/></div>
                       <div class="work-caption font-alt">
-                        <h3 class="work-title">New Product</h3>
-                        <div class="work-descr">Marketing</div>
+                        <h3 class="work-title">Rizal Park</h3>
+                        <div class="work-descr">Davao del Sur</div>
                       </div></a></li>
                       <li class="work-item marketing"><a href="portfolio_single_featured_slider1.html">
-                        <div class="work-image"><img src="assets/images/portfolio/masonry-portfolio9.jpg" alt="Portfolio Item"/></div>
+                        <div class="work-image"><img src="../images/1201pearlfarm.jpg" alt="Portfolio Item"/></div>
                         <div class="work-caption font-alt">
-                          <h3 class="work-title">Bottle MockUp</h3>
-                          <div class="work-descr">Marketing</div>
+                          <h3 class="work-title">Pearl Farm Resort</h3>
+                          <div class="work-descr">Davao del Norte</div>
                         </div></a></li>
                         <li class="work-item illustration photography"><a href="portfolio_single_featured_slider2.html">
-                          <div class="work-image"><img src="assets/images/portfolio/masonry-portfolio10.jpg" alt="Portfolio Item"/></div>
+                          <div class="work-image"><img src="../images/sanpedro.jpg" alt="Portfolio Item"/></div>
                           <div class="work-caption font-alt">
-                            <h3 class="work-title">Personal Identity</h3>
-                            <div class="work-descr">Photography</div>
+                            <h3 class="work-title">San Pedro Cathedral</h3>
+                            <div class="work-descr">Davao del Sur</div>
                           </div></a></li>
                           <li class="work-item illustration marketing"><a href="portfolio_single_featured_video1.html">
-                            <div class="work-image"><img src="assets/images/portfolio/masonry-portfolio11.jpg" alt="Portfolio Item"/></div>
+                            <div class="work-image"><img src="../images/chinatown.jpg" alt="Portfolio Item"/></div>
                             <div class="work-caption font-alt">
-                              <h3 class="work-title">Business Card</h3>
-                              <div class="work-descr">Webdesign</div>
+                              <h3 class="work-title">Chinatown</h3>
+                              <div class="work-descr">Davao del Sur </div>
                             </div></a></li>
                             <li class="work-item illustration webdesign"><a href="portfolio_single_featured_image2.html">
-                              <div class="work-image"><img src="assets/images/portfolio/masonry-portfolio8.jpg" alt="Portfolio Item"/></div>
+                              <div class="work-image"><img src="../images/croc.jpg" alt="Portfolio Item"/></div>
                               <div class="work-caption font-alt">
-                                <h3 class="work-title">Paper Clip</h3>
-                                <div class="work-descr">Illustration</div>
+                                <h3 class="work-title">Crocodile Park</h3>
+                                <div class="work-descr">Davao del Sur</div>
                               </div></a></li>
                             </ul>
                           </div>

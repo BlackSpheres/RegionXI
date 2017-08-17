@@ -1866,11 +1866,11 @@ Google map
 }
 
 .works-grid.works-grid-gut {
-  margin: 0 -10px 0 0;
+  margin: 0 -10px 0 -10px;
 }
 
 .works-grid.works-grid-gut .work-item {
-  padding: 0 10px 10px 0;
+  padding: 0 10px 0 10px;
 }
 
 .work-item {
