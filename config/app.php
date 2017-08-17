@@ -181,7 +181,8 @@ return [
         Orchestra\Memory\MemoryServiceProvider::class,
 
         Orchestra\Auth\CommandServiceProvider::class,
-        Orchestra\Memory\CommandServiceProvider::class
+        Orchestra\Memory\CommandServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ],
 
     /*
@@ -231,6 +232,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'ACL' => Orchestra\Support\Facades\ACL::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];
