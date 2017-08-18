@@ -15,8 +15,8 @@ Route::get('/', function () {return view('homepage');});
 Route::get('gallery', function () {return view('gallery');});
 Route::get('about', function () {return view('about');});
 Route::get('wait', function () {return view('wait');});
-Route::get('/redirect', 'SocialAuthController@redirect');
-Route::get('/callback', 'SocialAuthController@callback');
+Route::get('/redirect/{provider}', 'SocialAuthController@redirect');
+Route::get('/callback/{provider}', 'SocialAuthController@callback');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
