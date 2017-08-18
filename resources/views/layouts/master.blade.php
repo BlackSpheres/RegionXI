@@ -49,60 +49,86 @@
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#totop">Home</a></li>
+              <li><a href="{!! url('/'); !!}">Home</a></li>
               <li><a class="section-scroll" href="#services">Discover Davao</a></li>
               <li><a class="section-scroll" href="{!! url('/gallery'); !!}">Gallery</a></li>
               <li><a class="section-scroll" href="#alt-features">News and Events</a></li>
               <li><a class="section-scroll" href="#alt-features">About</a></li>
-              <li><a class="section-scroll" href="#team">Forum</a></li>
+              <li><a class="section-scroll" href="{!! url('/forums'); !!}">Forum</a></li>
               
             </ul>
           </div>
         </div>
       </nav>
     </main>
+
     @yield('content')
-    <footer>
-      <table>
-        <tr>
-          <th>TALK TO US<br><hr align="left"></th>
-          <th>CONTACT US<br><hr align="left"></th>
-          <th>SOCIAL LINKS<br><hr align="left"></th>
-        </tr>
-        <tr >
-          <td>
-            <blockquote>
-              <form>
-                
-                <input type="name" id="username" placeholder="Enter name">
-                <input type="email" id="email" placeholder="Enter email">
-                <textarea placeholder="Message us! How can we help?"></textarea>
-                
-                <button type="submit" id="submit">SUBMIT</button>
-              </form>
-            </blockquote>
-          </td>
-          <td>
-            <blockquote>
-              email: regionXI@support.com<br>
-              phone: (02) 961-89-83<br><Br><Br><br><Br>
-            </blockquote>
-          </td>
-          
-          <td>
-            <blockquote>
-              <a href="#"><img src="images/twitter.png" width="60px" height="60px"></a>
-              &nbsp;
-              <a href="#"><img src="images/facebook.png" width="60px" height="60px"></a>
-              <br><Br><br><Br><br>
-            </blockquote>
-            
-          </td>
-        </tr>
-        <tr>
-        </tr>
-      </table>
-    </footer>
+    <div class="module-small bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">About Us</h5>
+                  <p>We are a team assigned to make a website about the bountiful land of Davao and we're greatly exhausted pero keri lang.</p>
+                  <p>Phone: +1 234 567 89 10</p>Fax: +1 234 567 89 10
+                  <p>Email:<a href="#">regionXI@mail.com</a></p>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Map</h5>
+                  <div id="maps">
+                  <iframe src="https://snazzymaps.com/embed/10266" width="100%" height="250px" style="border:none;">
+                  </iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Contact Us</h5>
+                   <form id="contactForm" role="form" method="post" action="php/contact.php">
+                  <div class="form-group">
+                    <label class="sr-only" for="name">Name</label>
+                    <input class="form-control input-sm" type="text" id="name" name="name" placeholder="Your Name*" required="required" data-validation-required-message="Please enter your name."/>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="email">Email</label>
+                    <input class="form-control input-sm" type="email" id="email" name="email" placeholder="Your Email*" required="required" data-validation-required-message="Please enter your email address."/>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" rows="6" id="message" name="message" placeholder="Your Message*" required="required" data-validation-required-message="Please enter your message."></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="text-center">
+                    <button class="btn btn-border-w btn-circle btn-block" type="submit">Submit</button>
+                  </div>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        </div>
+        
+  <hr class="divider-d">
+  <footer class="footer bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">RegionXI</a>, All Rights Reserved</p>
+              </div>
+              <div class="col-sm-6">
+                <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+   
     <script type="text/javascript" src="../js/_main.js"></script>
     <script type="text/javascript" src="../js/imagesloaded.js"></script>
     <script>
@@ -116,24 +142,6 @@
       });
     }
     </script>
-    <script type="text/javascript">
-    // create the back to top button
-    $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
-    // change the value with how many pixels scrolled down the button will appear
-    var amountScrolled = 150;
-    $(window).scroll(function() {
-      if ( $(window).scrollTop() > amountScrolled ) {
-        $('a.back-to-top').fadeIn('slow');
-      } else {
-        $('a.back-to-top').fadeOut('slow');
-      }
-    });
-    $('a.back-to-top, a.simple-back-to-top').click(function() {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 400);
-      return false;
-    });
-    </script>
+
   </body>
 </html>
