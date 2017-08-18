@@ -18,5 +18,4 @@ Route::get('wait', function () {return view('wait');});
 Route::get('/redirect/{provider}', 'SocialAuthController@redirect');
 Route::get('/callback/{provider}', 'SocialAuthController@callback');
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

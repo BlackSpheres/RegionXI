@@ -18,23 +18,10 @@
     <link href="../lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
     <link href="../magnific-popup/dist/magnific-popup.css" rel="stylesheet">
     <link href="../lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
-    <script src="../lib/jquery/dist/jquery.js"></script>
-    <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../lib/wow/dist/wow.js"></script>
-    <script src="../lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
-    <script src="../lib/isotope/dist/isotope.pkgd.js"></script>
-    <script src="../lib/imagesloaded/imagesloaded.pkgd.js"></script>
-    <script src="../lib/flexslider/jquery.flexslider.js"></script>
-    <script src="../lib/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script src="../lib/smoothscroll.js"></script>
-    <script src="../lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
-    <script src="../lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
-    <script src="../js/plugins.js"></script>
-    <script src="../js/main.js"></script>
     <!-- Main stylesheet and color file-->
     <link href="../css/style.css" rel="stylesheet">
     <link id="color-scheme" href="../css/colors/default.css" rel="stylesheet">
-    <script src="../js/vendor/modernizr-2.7.1.min.js"></script>
+    
   </head>
   <body>
     
@@ -142,6 +129,19 @@
       });
     }
     </script>
-
+    <script src="../lib/jquery/dist/jquery.js"></script>
+    <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../lib/wow/dist/wow.js"></script>
+    <script src="../lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+    <script src="../lib/isotope/dist/isotope.pkgd.js"></script>
+    <script src="../lib/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="../lib/flexslider/jquery.flexslider.js"></script>
+    <script src="../lib/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="../lib/smoothscroll.js"></script>
+    <script src="../lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="../lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/vendor/modernizr-2.7.1.min.js"></script> 
   </body>
 </html>

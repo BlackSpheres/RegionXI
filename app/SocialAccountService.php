@@ -3,7 +3,7 @@
 namespace App;
 
 use Laravel\Socialite\Contracts\Provider;
-
+use  Illuminate\Contracts\Auth\Authenticatable;
 class SocialAccountService
 {
     public function createOrGetUser(Provider $provider)
