@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {return view('homepage');});
-Route::get('gallery', function () {return view('gallery');});
+Route::get('gallery','GalleryController@index');
 Route::get('about', function () {return view('about');});
 Route::get('wait', function () {return view('wait');});
 Route::get('/redirect/{provider}', 'SocialAuthController@redirect');
