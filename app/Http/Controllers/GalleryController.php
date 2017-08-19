@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 use App\Gallery;
 class GalleryController extends Controller
@@ -18,6 +18,12 @@ class GalleryController extends Controller
 
         return view('gallery',compact('galleryPics'));
     }
+    public function getTag(String $tag){
+        $galleryPics = DB::table('galleries')->where("tag",$tag)->select("galleries.*")->get();
+        return view('gallery',compact('galleryPics'));
+    }
+
+
 
     /**
      * Show the form for creating a new resource.

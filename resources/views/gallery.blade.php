@@ -14,13 +14,12 @@
       <div class="row">
         <div class="col-sm-12">
           <ul class="filter font-alt" id="filter">
-            <li><a class="current wow fadeInUp" href="#" data-filter="*">All</a></li>
-            <li><a class="wow fadeInUp" href="#" data-filter=".valley" data-wow-delay="0.2s">Compostella Valley</li>
-            
-            <li><a class="wow fadeInUp" href="#" data-filter=".norte" data-wow-delay="0.4s">Davao del Norte</a></li>
-            <li><a class="wow fadeInUp" href="#" data-filter=".sur" data-wow-delay="0.6s">Davao del Sur</a></li>
-            <li><a class="wow fadeInUp" href="#" data-filter=".oriental" data-wow-delay="0.6s">Davao Oriental</a></li>
-            <li><a class="wow fadeInUp" href="#" data-filter=".occidental" data-wow-delay="0.2s">Davao Occidental</li>
+            <li><a class="current wow fadeInUp" href="{{url('/gallery/')}}" data-filter="*">All</a></li>
+            <li><a class="wow fadeInUp" href="{{url('/gallery/valley')}}" data-filter=".valley" data-wow-delay="0.2s">Compostella Valley</li>
+            <li><a class="wow fadeInUp" href="{{url('/gallery/norte')}}" data-filter=".norte" data-wow-delay="0.4s">Davao del Norte</a></li>
+            <li><a class="wow fadeInUp" href="{{url('/gallery/sur')}}" data-filter=".sur" data-wow-delay="0.6s">Davao del Sur</a></li>
+            <li><a class="wow fadeInUp" href="{{url('/gallery/oriental')}}" data-filter=".oriental" data-wow-delay="0.6s">Davao Oriental</a></li>
+            <li><a class="wow fadeInUp" href="{{url('/gallery/occidental')}}" data-filter=".occidental" data-wow-delay="0.2s">Davao Occidental</li>
           </ul>
         </div>
       </div>
