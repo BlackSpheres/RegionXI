@@ -26,7 +26,7 @@
       </div>
       <ul class="works-grid works-grid-masonry works-grid-3 works-hover-d" id="works-grid">
         @foreach ($galleryPics as $pic)
-          <li class="work-item {{$pic->tag}}">
+        <li class="work-item {{$pic->tag}}">
           <a href="#">
             <div class="work-image">
               <img src="../images/{{$pic->filename}}" alt="Portfolio Item"/>
@@ -34,43 +34,24 @@
             <div class="work-caption font-alt">
               <h3 class="work-title">{{$pic->displayname}}</h3>
               <div class="work-descr">
-              @if($pic->tag === 'valley')
-              Compostella Valley
-              @elseif($pic->tag === 'norte')
-              Davao Del Norte
-              @elseif($pic->tag === 'sur')
-              Davao Del Sur
-              @elseif($pic->tag === 'oriental')
-              Davao Del Oriental
-              @elseif($pic->tag === 'occidental')
-              Davao Del Occidental
-              @endif
+                @if($pic->tag === 'valley')
+                Compostella Valley
+                @elseif($pic->tag === 'norte')
+                Davao Del Norte
+                @elseif($pic->tag === 'sur')
+                Davao Del Sur
+                @elseif($pic->tag === 'oriental')
+                Davao Oriental
+                @elseif($pic->tag === 'occidental')
+                Davao Occidental
+                @endif
               </div>
             </div>
           </a>
         </li>
         @endforeach
-
-
-
-
-       <!-- 
- 
-
-
-     
-        
-           
-     
-                          <li class="work-item illustration webdesign"><a href="portfolio_single_featured_image2.html">
-                            <div class="work-image"><img src="../images/croc.jpg" alt="Portfolio Item"/></div>
-                            <div class="work-caption font-alt">
-                              <h3 class="work-title">Crocodile Park</h3>
-                              <div class="work-descr">Davao del Sur</div>
-                            </div></a></li>
-                            !-->
-                  </ul>
-                </div>
-              </section>
-            </div>
-            @endsection
+      </ul>
+    </div>
+  </section>
+</div>
+@endsection
