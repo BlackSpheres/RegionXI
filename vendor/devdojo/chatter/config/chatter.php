@@ -21,41 +21,19 @@ return [
         'login'      => 'login',
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Forum Titles
-    |--------------------------------------------------------------------------
-    |
-    | These are some default titles (words) that will be used throughout your
-    | forum. You can change these to whatever you would like :)
-    |
-    */
-
-    'titles' => [
-        'discussion'  => 'Discussion',
-        'discussions' => 'Discussions',
-        'category'    => 'Category',
-    ],
-
    /*
     |--------------------------------------------------------------------------
-    | The main headline and description of your forum
+    | Headline logo
     |--------------------------------------------------------------------------
     |
-    | Your headline and your description will be shown on the homepage of your
-    | forum, unless you change the default theme.
+    | Specify the url for your logo. If left empty the headline and
+    | description from the language files will be used.
     |
-    |   *headline*: This is the main headline on the forum homepage
-    |
-    |   *description*: This is the main description that will show under the
-    |       headline on the forum homepage.
     |   *headline_logo*: If this is set an image will be used on the forum home
     |       instead of text. Specify the relative path to the image here.
     |
     */
 
-    'headline'      => 'Welcome to Chatter',
-    'description'   => 'A simple forum package for your Laravel app.',
     'headline_logo' => '/vendor/devdojo/chatter/assets/images/logo-light.png',
 
     /*
@@ -153,24 +131,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Alert Message Titles
-    |--------------------------------------------------------------------------
-    |
-    | When a user successfully adds a new discussion or they do something wrong
-    | they will get an alert message. Based on the alert message there is a
-    | specific title message for every alert, which are defined below.
-    |
-    */
-
-    'alert_messages' => [
-        'success' => 'Well done!',
-        'info'    => 'Heads Up!',
-        'warning' => 'Wuh Oh!',
-        'danger'  => 'Oh Snap!',
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
     | A Few security measures to prevent spam on your forum
     |--------------------------------------------------------------------------
     |
@@ -232,6 +192,26 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Default orderby
+    |--------------------------------------------------------------------------
+    |
+    | This determines how the Discussions will be ordered on the home screen
+    |
+    */
+
+    'order_by' => [
+        'posts' => [
+            'order' => 'created_at',
+            'by' => 'ASC'
+        ],
+        'discussions' => [
+            'order' => 'last_reply_at',
+            'by' => 'DESC'
+        ]
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Email Notification Settings
     |--------------------------------------------------------------------------
     |
@@ -249,6 +229,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Use Soft Deletes
+    |--------------------------------------------------------------------------
+    |
+    | Setting this to true will mean when a post gets deleted the `deleted_at`
+    | date gets set but the actual row in the database does not get deleted.
+    | This is useful for forum moderation and history retention
+    |
+    */
+
+    'soft_deletes' => false,
+
+    /*
+    |--------------------------------------------------------------------------
     | Pagination Settings
     |--------------------------------------------------------------------------
     |
@@ -260,6 +253,18 @@ return [
     'paginate' => [
         'num_of_results' => 10,
     ],
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Show missing fields to users in forms
+    |--------------------------------------------------------------------------
+    |
+    | This usually has to be active to show the users what they are missing
+    | unless you want to manage by your own system in the master template
+    |
+    */
+
+    'errors' => true,
 
     /*
     |--------------------------------------------------------------------------

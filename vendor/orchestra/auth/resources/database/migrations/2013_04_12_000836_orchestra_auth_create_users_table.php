@@ -22,7 +22,7 @@ class OrchestraAuthCreateUsersTable extends Migration
 
             Event::fire('orchestra.install.schema: users', [$table]);
 
-            $table->string('name', 100)->nullable();
+            $table->string('fullname', 100)->nullable();
             $table->integer('status')->nullable();
             $table->rememberToken();
 
